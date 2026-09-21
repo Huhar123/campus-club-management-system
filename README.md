@@ -1,2 +1,2 @@
-# -
+# campus-club-management-system
 基于 SpringBoot + MyBatis 开发的校园社团报名与成员管理系统，实现社团信息展示、学生报名申请、成员信息维护、社团管理等基础功能。
