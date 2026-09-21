@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>社团管理系统 - 管理页面</title>
+    <link rel="stylesheet" href="/css/club.css">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <h2>🏫 社团管理系统</h2>
+        <div class="navbar-right">
+            <span class="user-role" id="userRole">👑 管理员</span>
+            <button class="btn-account" onclick="location.href='/account'">账号管理</button>
+            <button class="btn-logout" onclick="logout()">退出登录</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- 左侧：新增社团表单 -->
+        <div class="add-section">
+            <div class="card">
+                <h3>新增社团</h3>
+                <div class="input-group">
+                    <label>社团名称</label>
+                    <input type="text" id="clubName" placeholder="请输入社团名称">
+                </div>
+                <div class="input-group">
+                    <label>社团类型</label>
+                    <input type="text" id="clubType" placeholder="请输入社团类型">
+                </div>
+                <button class="btn-add" onclick="addClub()">提交</button>
+            </div>
+        </div>
+
+        <!-- 右侧：社团列表 -->
+        <div class="list-section">
+            <div class="card">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 按社团名称查询" oninput="searchClub()">
+                </div>
+                <table class="club-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>社团名称</th>
+                        <th>社团类型</th>
+                        <th>报名状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="clubTableBody">
+                    <tr><td colspan="5">加载中...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/club.js"></script>
+</body>
+</html>

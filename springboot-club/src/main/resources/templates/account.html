@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>账号管理</title>
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+<body>
+<div class="container">
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <h2>🏫 社团管理系统</h2>
+        <div class="navbar-right">
+            <span class="user-role" id="userRole">👑 管理员</span>
+            <button class="btn-back" onclick="location.href='/club'">← 返回社团</button>
+            <button class="btn-logout" onclick="logout()">退出登录</button>
+        </div>
+    </div>
+
+    <!-- 主内容 -->
+    <div class="main-content">
+        <div class="card">
+            <h3>👤 人员管理</h3>
+
+            <!-- 新增学生表单 -->
+            <div class="add-student-form">
+                <input type="text" id="newStudentName" placeholder="学生姓名">
+                <input type="text" id="newStudentNum" placeholder="学号">
+                <input type="password" id="newStudentPwd" placeholder="密码（默认123456）">
+                <button class="btn-add-student" onclick="addStudent()">添加学生</button>
+            </div>
+
+            <!-- 学生列表表格 -->
+            <table class="student-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>角色</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                <tr><td colspan="5">加载中...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/account.js"></script>
+</body>
+</html>

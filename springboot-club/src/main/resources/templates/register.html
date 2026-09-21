@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>社团管理系统 - 注册</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="register-card">
+    <h2 class="card-title">学生注册</h2>
+
+    <form id="registerForm">
+        <div class="input-group">
+            <label>学生姓名</label>
+            <input type="text" id="studentName" placeholder="请输入姓名">
+        </div>
+
+        <div class="input-group">
+            <label>学号</label>
+            <input type="text" id="studentNum" placeholder="请输入学号">
+        </div>
+
+        <div class="input-group">
+            <label>密码（至少6位）</label>
+            <input type="password" id="password" placeholder="请输入密码">
+            <div id="pwdError" class="error-msg"></div>
+        </div>
+
+        <div class="input-group">
+            <label>确认密码</label>
+            <input type="password" id="confirmPwd" placeholder="请再次输入密码">
+            <div id="confirmError" class="error-msg"></div>
+        </div>
+
+        <div class="input-group">
+            <label>验证码</label>
+            <div class="captcha-row">
+                <input type="text" id="captchaInput" placeholder="请输入验证码">
+                <div class="captcha-code" id="captchaCode" onclick="generateCaptcha()">ABCD</div>
+                <button type="button" class="refresh-btn" onclick="generateCaptcha()">🔄</button>
+            </div>
+            <div id="captchaError" class="error-msg"></div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn-register" onclick="register()">注册</button>
+            <button type="button" class="btn-reset" onclick="resetForm()">重置</button>
+        </div>
+
+        <div class="register-link">
+            已有账号？<a href="/login">去登录</a>
+        </div>
+    </form>
+</div>
+
+<script src="/register.js"></script>
+</body>
+</html>

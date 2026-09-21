@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F7FA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #2F4050;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: white;
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+/* 导航栏右侧 */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 用户角色标签 */
+.user-role {
+    color: #fff;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+/* 账号管理按钮 */
+.btn-account {
+    background-color: #409EFF;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-account:hover {
+    background-color: #66B1FF;
+}
+
+.btn-logout {
+    background-color: #F56C6C;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-logout:hover {
+    background-color: #F78989;
+}
+
+/* 主内容区 - 左右布局 */
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 左侧新增区 - 占30% */
+.add-section {
+    flex: 3;
+}
+
+/* 右侧列表区 - 占70% */
+.list-section {
+    flex: 7;
+}
+
+/* 卡片样式 */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* 输入框 */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #606266;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #DCDFE6;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #409EFF;
+    box-shadow: 0 0 6px rgba(64, 158, 255, 0.3);
+}
+
+/* 按钮 */
+.btn-add {
+    width: 100%;
+    height: 42px;
+    background-color: #67C23A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #85CE61;
+}
+
+/* 搜索框 */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #DCDFE6;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #409EFF;
+}
+
+/* 表格 */
+.club-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.club-table th,
+.club-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #EBEEF5;
+}
+
+.club-table th {
+    background-color: #F5F7FA;
+    color: #606266;
+    font-weight: bold;
+}
+
+.club-table tbody tr:nth-child(even) {
+    background-color: #FAFAFA;
+}
+
+.club-table tbody tr:hover {
+    background-color: #ECF5FF;
+}
+
+/* 状态标签 */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status-registered {
+    background-color: #409EFF;
+    color: white;
+}
+
+.status-joined {
+    background-color: #67C23A;
+    color: white;
+}
+
+.status-cancelled {
+    background-color: #909399;
+    color: white;
+}
+
+.status-unregistered {
+    background-color: #E4E7ED;
+    color: #606266;
+}
+
+/* 操作按钮 */
+.btn-register {
+    background-color: #409EFF;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.btn-register:hover {
+    background-color: #66B1FF;
+}
+
+select.status-select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #DCDFE6;
+    font-size: 12px;
+}
+
+/* 编辑和删除按钮 */
+.btn-edit {
+    background-color: #E6A23C;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.btn-edit:hover {
+    background-color: #EBB563;
+}
+
+.btn-delete {
+    background-color: #F56C6C;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-delete:hover {
+    background-color: #F78989;
+}

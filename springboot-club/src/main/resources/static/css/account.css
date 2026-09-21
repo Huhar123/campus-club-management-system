@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F7FA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #2F4050;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: white;
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-role {
+    color: #fff;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+.btn-back {
+    background-color: #909399;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-back:hover {
+    background-color: #A6A9AD;
+}
+
+.btn-logout {
+    background-color: #F56C6C;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-logout:hover {
+    background-color: #F78989;
+}
+
+/* 主内容 */
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 900px;
+    max-width: 100%;
+}
+
+.card h3 {
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* 新增表单 */
+.add-student-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.add-student-form input {
+    flex: 1;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #DCDFE6;
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.add-student-form input:focus {
+    outline: none;
+    border-color: #409EFF;
+    box-shadow: 0 0 6px rgba(64, 158, 255, 0.3);
+}
+
+.btn-add-student {
+    height: 40px;
+    padding: 0 20px;
+    background-color: #67C23A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-add-student:hover {
+    background-color: #85CE61;
+}
+
+/* 表格 */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #EBEEF5;
+}
+
+.student-table th {
+    background-color: #F5F7FA;
+    color: #606266;
+    font-weight: bold;
+}
+
+.student-table tbody tr:nth-child(even) {
+    background-color: #FAFAFA;
+}
+
+.student-table tbody tr:hover {
+    background-color: #ECF5FF;
+}
+
+/* 操作按钮 */
+.btn-edit {
+    background-color: #E6A23C;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.btn-edit:hover {
+    background-color: #EBB563;
+}
+
+.btn-delete {
+    background-color: #F56C6C;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-delete:hover {
+    background-color: #F78989;
+}
+
+/* 角色标签 */
+.role-admin {
+    background-color: #F56C6C;
+    color: white;
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.role-user {
+    background-color: #409EFF;
+    color: white;
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+}
